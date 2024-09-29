@@ -32,7 +32,8 @@ public class ValidationService {
 
         validation.setCode(code);
         validation = this.validationRepository.save(validation);
-        this.mailSender.sendActivationAccountMail(validation);
+        System.out.println("Code de validation:" + validation.getCode());
+        //this.mailSender.sendActivationAccountMail(validation);
     }
 
     public void updateValidation(Validation validation) {
